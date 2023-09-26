@@ -1,24 +1,15 @@
 <script>
-import axios from 'axios';
+import {state} from '../state.js';
 
 export default {
     name: 'AppMain',
     data() {
         return {
-            base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
-            monsters: null
+            state
         }
     },
     created() {
-        axios
-        .get(this.base_url)
-        .then(response => {
-            console.log(response);
-            this.monsters = response.data.data
-        })
-        .catch(error => {
-            console.error(error);
-        })
+        state.fetchData();
     }
 }
 </script>
@@ -41,9 +32,9 @@ export default {
             </div>
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
-                <div class="col" v-for="monster in monsters">
+                <div class="col" v-for="monster in state.monsters">
                     <div class="card rounded-0 border-0 h-100">
-                        <img :src="monster.card_images[card_url]" alt="">
+                        <img :src="monster.card_images.card_url_small" alt="">
                         <div class="card-body rounded-0 border-0 text-center">
                             <h3 class="text-white">{{monster.name}}</h3>
                             <h5>{{monster.archetype}}</h5>
