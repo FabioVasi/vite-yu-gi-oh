@@ -27,13 +27,18 @@ export default {
 
   <main id="main_yu_gi_oh" class="mt-4">
 
-    <div class="container">
-        <div class="row row-cols-1 row-cols-sm-3">
+    
+    <div class="lamincards container p-5">
+        <div class="found container d-flex align-items-center">
+            <h4 class="text-white">Found {{base_url.length}} cards</h4>
+        </div>
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
             <div class="col" v-for="monster in monsters">
-                <div class="card">
-                    <img :src="monster.card_images" alt="">
-                    <div class="card-body">
-
+                <div class="card rounded-0 border-0 h-100">
+                    <img :src="monster.card_images[card_url]" alt="">
+                    <div class="card-body rounded-0 border-0 text-center">
+                        <h3 class="text-white">{{monster.name}}</h3>
+                        <h5>{{monster.archetype}}</h5>
                     </div>
                 </div>
             </div>
@@ -44,9 +49,17 @@ export default {
 
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
     @use '../assets/scss/partials/variables.scss' as *;
-
-
+    .found{
+        background-color: $bg_card_finder;
+        height: 50px;
+    }
+    .lamincards{
+        background-color: white;
+    }
+    .card{
+        background-color: $bg_body;
+    }
 
 </style>
