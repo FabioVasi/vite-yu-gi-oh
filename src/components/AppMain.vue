@@ -34,7 +34,7 @@ export default {
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
                 <div class="col" v-for="monster in state.monsters">
                     <div class="card rounded-0 border-0 h-100">
-                        <img :src="monster.card_images.card_url_small" alt="">
+                        <img class="w-100" :src="monster.card_images[0].image_url" alt="">
                         <div class="card-body rounded-0 border-0 text-center">
                             <h3 class="text-white">{{monster.name}}</h3>
                             <h5>{{monster.archetype}}</h5>
