@@ -9,13 +9,13 @@ export default {
 </script>
 
 <template>
-  <footer>
+  <footer id="footer_yu_gi_oh">
 
   </footer>
 </template>
 
 <style lang="scss">
-  @use '../assets/scss/partials/variables.scss' as *;
+    @use '../assets/scss/partials/variables.scss' as *;
 
   
 
