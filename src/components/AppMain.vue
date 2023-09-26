@@ -2,18 +2,24 @@
 import axios from 'axios';
 
 export default {
-  data() {
-    return {
-      name: 'AppMain'
+    name: 'AppMain',
+    data() {
+        return {
+            base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
+            monsters: null
+        }
+    },
+    created() {
+        axios
+        .get(this.base_url)
+        .then(response => {
+            console.log(response);
+            this.monsters = response.data.data
+        })
+        .catch(error => {
+            console.error(error);
+        })
     }
-  },
-  created() {
-    axios
-    .get(this.base_url)
-    .then(response => {
-        console.log(response);
-    })
-  }
 }
 </script>
 
@@ -21,20 +27,18 @@ export default {
 
   <main id="main_yu_gi_oh" class="mt-4">
 
-    <section class="monsters">
-        <div class="container">
-            <div class="row row-cols-1 row-cols-sm-3">
-                <div class="col">
-                    <div class="card">
-                        <img src="" alt="">
-                        <div class="card-body">
+    <div class="container">
+        <div class="row row-cols-1 row-cols-sm-3">
+            <div class="col" v-for="monster in monsters">
+                <div class="card">
+                    <img :src="monster.card_images" alt="">
+                    <div class="card-body">
 
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
   
 </main>
 
