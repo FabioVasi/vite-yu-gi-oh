@@ -9,9 +9,11 @@ export default {
 </script>
 
 <template>
+
   <footer id="footer_yu_gi_oh">
 
   </footer>
+  
 </template>
 
 <style lang="scss">
