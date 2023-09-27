@@ -22,7 +22,6 @@ export default {
             const url = this.state.base_url + `?archetypes={this.state.monsterArchetype}`
             console.log(url);
             this.state.fetchData(url)
-            this.state.monsterArchetype = ''
         }
     },
     created() {
@@ -45,26 +44,7 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+
     @use '../assets/scss/partials/variables.scss' as *;
-    select{
-        width: 150px;
-        height: 30px;
-    }
-    .found{
-        background-color: $bg_card_finder;
-        height: 3rem;
-    }
-    .lamincards{
-        background-color: white;
-    }
-    .card{
-        background-color: $bg_body;
-    }
-    .icon{
-        height: 30px;
-        width: 30px;
-    }
-    .load{
-        display: inline-block;
-    }
+    
 </style>

@@ -6,6 +6,11 @@ export default {
     name: 'CardsList',
     components: {
         CardsItem
+    },
+    data() {
+        return {
+            state
+        }
     }
 }
 </script>
@@ -31,5 +36,12 @@ export default {
 </template>
 
 <style lang="scss">
-
+    @use '../assets/scss/partials/variables.scss' as *;
+    .found{
+        background-color: $bg_card_finder;
+        height: 3rem;
+    }
+    .lamincards{
+        background-color: white;
+    }
 </style>

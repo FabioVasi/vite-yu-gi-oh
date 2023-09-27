@@ -25,5 +25,8 @@ export default {
 </template>
 
 <style lang="scss">
-
+    @use '../assets/scss/partials/variables.scss' as *;
+    .card{
+        background-color: $bg_body;
+    }
 </style>

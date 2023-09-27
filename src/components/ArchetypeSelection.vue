@@ -8,12 +8,16 @@ export default {
 </script>
 <template>
     <div class="container pt-5 pb-5 selectbox">
-        <select class="border-0 rounded-2" name="archetype" id="archetype" @change="$emit('performSearch')" v-model="state.monsterArchetype">
-            <option>Alien</option>
+        <select class="border-0 rounded-2" name="archetype" id="archetype">
+            <option value="archetypes">Alien</option>
         </select>
     </div>
 </template>
 
 <style lang="scss">
-
+    @use '../assets/scss/partials/variables.scss' as *;
+    select{
+        width: 150px;
+        height: 30px;
+    }
 </style>
