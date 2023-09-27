@@ -21,7 +21,7 @@ export default {
 
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
                 
-                <CardsItem></CardsItem>
+                <CardsItem :monster="monster" v-for="monster in state.monsters"></CardsItem>
 
             </div>
         </div>

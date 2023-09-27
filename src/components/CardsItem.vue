@@ -11,7 +11,7 @@ export default {
 </script>
 <template>
 
-    <div class="col" v-for="monster in state.monsters">
+    <div class="col">
         <div class="card rounded-0 border-0 h-100">
             <img :src="monster.card_images[0].image_url" alt="">
             <div class="card-body rounded-0 border-0 text-center">
