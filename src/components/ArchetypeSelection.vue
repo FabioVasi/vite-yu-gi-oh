@@ -15,7 +15,7 @@ export default {
     <div class="container pt-5 pb-5 selectbox">
         <select class="border-0 rounded-2" name="archetypes" @change="$emit('performSearch')" id="archetypes" v-model="state.monsterArchetype">
             <option value="" disabled>Select Archetype</option>
-            <option v-for="archetype in monsterArchetype" value="archetypes">{{archetype.archetype_name}}</option>
+            <option v-for="archetype in state.monsterArchetype" value="archetypes">{{archetype.archetypes.archetype_name}}</option>
         </select>
     </div>
 </template>
