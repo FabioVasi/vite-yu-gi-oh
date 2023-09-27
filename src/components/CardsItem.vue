@@ -1,4 +1,5 @@
 <script>
+import { state } from '../state.js';
 
 export default {
     name: 'CardsItem',
@@ -9,6 +10,7 @@ export default {
     
 </script>
 <template>
+
     <div class="col" v-for="monster in state.monsters">
         <div class="card rounded-0 border-0 h-100">
             <img :src="monster.card_images[0].image_url" alt="">
@@ -19,6 +21,7 @@ export default {
             </div>
         </div>
     </div>
+
 </template>
 
 <style lang="scss">

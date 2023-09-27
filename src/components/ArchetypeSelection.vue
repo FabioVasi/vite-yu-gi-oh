@@ -8,7 +8,7 @@ export default {
 </script>
 <template>
     <div class="container pt-5 pb-5 selectbox">
-        <select class="border-0 rounded-2" name="archetype">
+        <select class="border-0 rounded-2" name="archetype" id="archetype" @change="$emit('performSearch')" v-model="state.monsterArchetype">
             <option>Alien</option>
         </select>
     </div>
