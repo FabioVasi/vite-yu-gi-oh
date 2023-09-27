@@ -15,9 +15,8 @@ export default {
 <template>
     <div class="container pt-5 pb-5 selectbox">
         <select class="border-0 rounded-2" name="archetypes" @change="$emit('performSearch')" id="archetypes" v-model="state.monsterArchetype">
-            <option value="" disabled>Select Archetype</option>
-            <option value="archetypes">Alien</option>
-            <option v-for="archetype in state.monsterArchetype" value="archetypes">{{archetype.archetypes.archetype_name}}</option>
+            <option value="" disabled>Archetypes</option>
+            <option v-for="archetype in state.monsterArchetype" value="archetype_name">{{archetype.archetype_name}}</option>
         </select>
     </div>
 </template>
@@ -25,7 +24,7 @@ export default {
 <style lang="scss">
     @use '../assets/scss/partials/variables.scss' as *;
     select{
-        width: 150px;
+        width: 200px;
         height: 30px;
     }
 </style>

@@ -35,7 +35,7 @@ export default {
     <main id="main_yu_gi_oh">
 
         <ArchetypeSelection/>
-        <CardsList  v-if="state.monsters"/>
+        <CardsList v-if="state.monsters"/>
         <LoadingsApp v-else/>
 
     </main>
