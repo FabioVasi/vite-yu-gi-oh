@@ -6,9 +6,9 @@ export default {
     props: {
         monster: Object
     }
-}
-    
+}  
 </script>
+
 <template>
 
     <div class="col">

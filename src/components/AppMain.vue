@@ -38,13 +38,10 @@ export default {
         <CardsList  v-if="state.monsters"/>
         <LoadingsApp v-else/>
 
-  
     </main>
 
 </template>
 
 <style lang="scss" scoped>
-
     @use '../assets/scss/partials/variables.scss' as *;
-    
 </style>

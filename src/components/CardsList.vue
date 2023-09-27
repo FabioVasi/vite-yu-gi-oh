@@ -14,13 +14,14 @@ export default {
     }
 }
 </script>
+
 <template>
 
     <section>
             
         <div class="lamincards container p-5">
 
-            <div class="found container d-flex align-items-center">
+            <div class="found container d-flex align-items-center mb-3">
                 <h4 class="text-white">Found {{state.base_url.length}} cards</h4>
             </div>
 
@@ -29,6 +30,7 @@ export default {
                 <CardsItem :monster="monster" v-for="monster in state.monsters"></CardsItem>
 
             </div>
+
         </div>
 
     </section>
