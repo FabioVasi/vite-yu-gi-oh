@@ -6,6 +6,7 @@ export const state = reactive({
     archetypes_url : 'https://db.ygoprodeck.com/api/v7/archetypes.php',
     monsters: null,
     monsterArchetype: '',
+    archetype: '',
    
     fetchData(url) {
         console.log(this, this.base_url);
