@@ -22,7 +22,8 @@ export const state = reactive({
     },
     fetchArch() {
         this.archetype_url = 'https://db.ygoprodeck.com/api/v7/archetypes.php';
-        axios(this.archetype_url)
+        axios
+        .get(this.archetype_url)
         .then(response => {
             this.monsterArchetypes = response.data;
         })

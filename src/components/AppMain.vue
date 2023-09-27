@@ -19,13 +19,14 @@ export default {
     methods: {
         selectArchetype() {
             console.log(state.monsterArchetypes);
-            const url = this.state.base_url + `?archetypes=${this.state.monsterArchetypes}`
+            const url = this.state.base_url + `&archetype=${this.state.findArchetypes}`
             console.log(url);
             this.state.fetchData(url)
         }
     },
     created() {
         state.fetchData(state.base_url);
+        state.fetchArch(state.archetype_url);
     }
 }
 </script>
@@ -34,7 +35,7 @@ export default {
 
     <main id="main_yu_gi_oh">
 
-        <ArchetypeSelection/>
+        <ArchetypeSelection @perform-search="selectArchetype"/>
         <CardsList v-if="state.monsters"/>
         <LoadingsApp v-else/>
 
