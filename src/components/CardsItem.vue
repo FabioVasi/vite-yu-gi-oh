@@ -1,5 +1,11 @@
 <script>
 
+export default {
+    name: 'CardsItem',
+    props: {
+        monster: Object
+    }
+}
     
 </script>
 <template>
@@ -15,6 +21,6 @@
     </div>
 </template>
 
-<style lang="scss" scoped>
+<style lang="scss">
 
 </style>

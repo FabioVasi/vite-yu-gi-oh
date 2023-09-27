@@ -4,10 +4,12 @@ import axios from 'axios';
 export const state = reactive({
     base_url: 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=20&offset=0',
     monsters: null,
+    monsterArchetype: '',
    
-    fetchData() {
+    fetchData(url) {
+        console.log(this, this.base_url);
         axios
-        .get(this.base_url)
+        .get(url)
         .then(response => {
             console.log(response);
             this.monsters = response.data.data;
