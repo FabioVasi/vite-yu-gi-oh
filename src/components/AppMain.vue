@@ -18,8 +18,8 @@ export default {
     },
     methods: {
         selectArchetype() {
-            console.log('searching...', state.monsterArchetypes);
-            const url = this.state.base_url + `?archetypes={this.state.monsterArchetypes}`
+            console.log(state.monsterArchetypes);
+            const url = this.state.base_url + `?archetypes=${this.state.monsterArchetypes}`
             console.log(url);
             this.state.fetchData(url)
         }
